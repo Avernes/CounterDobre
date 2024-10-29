@@ -8,7 +8,7 @@ public partial class MainPage : ContentPage
     {
         InitializeComponent();
     }
-    private void OnAddCounterClicked(object sender, EventArgs e)
+    private void OnAddCounterClicked(object sender, EventArgs e)//Metoda obsługująca kliknięcie przycisku "Dodaj licznik"
     {
         var counterLayout = new VerticalStackLayout { Padding = 10 };
 
