@@ -12,7 +12,7 @@ public partial class MainPage : ContentPage
     {
         var counterLayout = new VerticalStackLayout { Padding = 10 };
 
-        var counterName = $"Licznik {_counterIndex++}";
+        var counterName = $"Licznik {_counterIndex++}";//Dodane automatyczne nazywanie liczników
 
         var nameLabel = new Label { Text = counterName, FontSize = 18, HorizontalOptions = LayoutOptions.Center };
 
