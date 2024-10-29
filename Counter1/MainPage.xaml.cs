@@ -14,31 +14,31 @@ public partial class MainPage : ContentPage
 
         var counterName = $"Licznik {_counterIndex++}";//Dodane automatyczne nazywanie liczników
 
-        var nameLabel = new Label { Text = counterName, FontSize = 18, HorizontalOptions = LayoutOptions.Center };
+        var nameLabel = new Label { Text = counterName, FontSize = 20, HorizontalOptions = LayoutOptions.Center };//label wyświetlający nazwy użytkownika
 
-        var counterLabel = new Label { Text = "0", FontSize = 20, HorizontalOptions = LayoutOptions.Center };
+        var counterLabel = new Label { Text = "0", FontSize = 25, HorizontalOptions = LayoutOptions.Center };//label wyświetlający wartość licznika
 
-        var minusButton = new Button { Text = "-" };
+        var minusButton = new Button { Text = "-" };//plus
 
-        var plusButton = new Button { Text = "+" };
+        var plusButton = new Button { Text = "+" };//minus
 
         int counterValue = 0;
 
-        minusButton.Clicked += (s, e) =>
+        minusButton.Clicked += (s, e) =>//zmniejszanie wartości licznikqa po kliknieciu
         {
             counterValue--;
             counterLabel.Text = counterValue.ToString();
         };
 
-        plusButton.Clicked += (s, e) =>
+        plusButton.Clicked += (s, e) => //zwiększanie wartości licznika po kliknieciu
         {
             counterValue++;
             counterLabel.Text = counterValue.ToString();
         };
 
-        counterLayout.Children.Add(nameLabel);
-        counterLayout.Children.Add(counterLabel);
+        counterLayout.Children.Add(nameLabel);//dodanie labela z nazwą licznika do układu
+        counterLayout.Children.Add(counterLabel);//dodanie labela z wartością licznika do układu
         counterLayout.Children.Add(new HorizontalStackLayout { Children = { minusButton, plusButton } });
-        CountersStack.Children.Add(counterLayout);
+        CountersStack.Children.Add(counterLayout); //dodanie układu licznika
     }
 }
